@@ -1,0 +1,2 @@
+Railsでクライアントのタイムゾーンを扱いたい場合は[BrowserTimezoneRails](https://github.com/kbaum/browser-timezone-rails)を使うとよい。このライブラリはフロントエンド側でcookieのパラメータ`browser.timezone`にタイムゾーン名を設定し、サーバ側は`Time.use_zone`に設定することで実現している。
+ただし、このライブラリはWebAPIのようなフロントエンドにJavascriptを利用しなかったり、トークン認証のようにcookieを利用しない場合は適用できないので同様の仕組みを作る必要がある。
